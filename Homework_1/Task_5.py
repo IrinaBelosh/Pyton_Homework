@@ -12,12 +12,16 @@ y1 = int(input('Enter y1:'))
 x2 = int(input('Enter x2:'))
 y2 = int(input('Enter y2:'))
 
+# # первый вариант
+# def f(a1, b1, a2, b2):
+#     doublex = (a1-a2)*(a1-a2)
+#     doubley = (b1-b2)*(b1-b2)
+#     import math
+#     sqrt = math.sqrt(doublex+doubley)
+#     return round(sqrt)
 
-def f(a1, b1, a2, b2):
-    doublex = (a1-a2)*(a1-a2)
-    doubley = (b1-b2)*(b1-b2)
-    import math
-    sqrt = math.sqrt(doublex+doubley)
-    return round(sqrt)
+# print(f(x1, y1, x2, y2))
 
-print(f(x1, y1, x2, y2))
+# Второй вариант
+print(f"{((x2-x1)**2+(y2-y1)**2)**0.5:0.3}")
+# print(f"{((x2-x1)**2+(y2-y1)**2)**0.5:.3f}")

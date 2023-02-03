@@ -13,3 +13,4 @@ for W in range(2):
                 if not ((W and Z) or (not Y) or ((not X) == (not W))):
                     print (W, Z, X, Y)
 
+

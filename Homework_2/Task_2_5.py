@@ -17,12 +17,30 @@ while j < user_number:
                 second_list.append(ran)
                 j = j+1
 print(second_list)
+
+# ---------------------------------------------------------------
+# Вариант из проверки дз, 
+
+from random import randrange
+
+num = int(input('Enter a number: '))
+nums_list = list(range(num))
+res_list = []
+
+print(nums_list)
+
+for i in range(num):
+    n_1, n_2 = randrange(num), randrange(num)
+    nums_list[n_1], nums_list[n_2] = nums_list[n_2], nums_list[n_1] # Используем метод кортежей (позиция, значение)
+
+print(nums_list)
+
+# --------------------------------------------
+nums_list = list(range(22,33))
+print(nums_list)
+for i, val in enumerate(nums_list):
+    print(i, val)
+
+
+
     
-
-
-
-# for i in range(user_number): #0
-#     while i < user_number:
-#         if randrange(user_number) not in second_list:
-#             second_list.append(randrange(user_number+1))
-# print(second_list)

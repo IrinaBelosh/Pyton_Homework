@@ -11,3 +11,4 @@ for j in range(1, number+1):
     i = i * j 
     my_list.append(i)
 print(my_list)
+

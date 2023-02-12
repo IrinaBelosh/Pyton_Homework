@@ -7,10 +7,33 @@
 # - 198.45 -> 27
 
 number = str(input('Enter a number: '))
-no_dots = int(number.replace(".", ""))
+no_dots = int(number.replace(".", "")) # Если точек несколько, replace(".", "", 1)) уберет только первую точку
 sum = int(0)
 while no_dots > 0:
     sum = sum + no_dots % 10
     no_dots = no_dots//10
 
 print(sum)
+
+# ---------------------------------------------------------
+# Вариант из проверки дз
+
+
+num = float(input()) 
+sum_digits = 0
+
+power = len(str(num)) - 2 # Меряем длину строки, за минусом точки и нуля
+num *= int(10 ** power) # Убираем дробную часть
+
+while num: # Условие звучит: "пока num не равно 0" (пока num = true). Если //10, рано или поздно получим 0 (false)
+    sum_digits += num % 10
+    num //= 10
+
+# 0.0000000000000000000001
+print(int(sum_digits))
+
+# ------------------ запрещенный способ
+
+print(sum(map(int, list(input("Введите дробное число: ").replace(".", "")))))
+# (map(int, list) - преобразуеп поэлементно все числа списка в интеджер
+# sum() - суммирует элементы
